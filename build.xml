@@ -117,7 +117,7 @@ knowledge of the CeCILL-B license and that you accept its terms.
    -->
 
   <property name="app.name"             value="${ant.project.name}"/>
-  <property name="app.version"          value="0.1"/>
+  <property name="app.version"          value="12.12.0"/>
   <property name="app.path"             value="/${app.name}"/>
   <property name="app.long.name"
             value="Application pour l'indexation de vocabulaires au format SKOS"/>
@@ -157,7 +157,12 @@ knowledge of the CeCILL-B license and that you accept its terms.
   <property name="compile.debug"        value="true"/>
   <property name="compile.deprecation"  value="false"/>
   <property name="compile.optimize"     value="false"/>
-
+  <property name="compile.target"       value="1.6"/>
+  <property name="compile.compiler"     value="javac1.6"/>
+  <property name="compile.source"       value="1.6"/>
+  <property name="compile.executable"   value="C:\Program Files\Java\jdk6\bin\javac"/>
+  <property name="compile.fork"         value="true"/>
+  <property name="compile.encoding"     value="UTF-8"/>
 
   <!-- ================ Compilation Classpath ============================= -->
 
@@ -263,7 +268,13 @@ knowledge of the CeCILL-B license and that you accept its terms.
           destdir="${classes.dir}"
             debug="${compile.debug}"
       deprecation="${compile.deprecation}"
-         optimize="${compile.optimize}">
+         optimize="${compile.optimize}"
+    	   target="${compile.target}"
+    	 compiler="${compile.compiler}"
+    	   source="${compile.source}"
+       executable="${compile.executable}"
+    	     fork="${compile.fork}"
+    	 encoding="${compile.encoding}">
       <classpath refid="compile.classpath"/>
     </javac>
     <!-- Copy application resources -->
