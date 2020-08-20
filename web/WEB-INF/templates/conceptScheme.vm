@@ -89,7 +89,7 @@ Paramètres:
 			    <ul id="topConceptList">
 					#foreach ($item in $sorter.sortEntriesByLabel($topConcepts, [$locale, null], true))
 						<li>
-					    	<a href="$resolver.toUrl($item.Uri)">$esc.html($item.getLabel($locale).value.toLowerCase())</a>
+					    	<a href="$resolver.toUrl($item.Uri)">$esc.html($item.getLabel($locale).value)</a>
 						</li>
 					#end
 			    </ul>
